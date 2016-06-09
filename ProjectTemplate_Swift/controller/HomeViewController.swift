@@ -35,7 +35,9 @@ class HomeViewController: UIViewController,CoreDataManagerDelegate,UITableViewDe
         players = results
         playerTable.reloadData()
     }
-
+    
+    
+    //MARK: table data delegate calls
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return players.count
@@ -52,6 +54,8 @@ class HomeViewController: UIViewController,CoreDataManagerDelegate,UITableViewDe
         return cell
     }
     
+    //MARK: table view delegate calls
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }

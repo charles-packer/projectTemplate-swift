@@ -10,11 +10,11 @@ import UIKit
 
 class ScreenService
 {
-    var mainWindow:UIWindow!
+    //MARK: init functions
 
+    var mainWindow:UIWindow!
     var mainStoryboard:UIStoryboard!
     static let sharedInstance = ScreenService()
-    
     private init(){}
     
     func startScreenService(mWindow:UIWindow)
@@ -23,6 +23,8 @@ class ScreenService
         mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     }
     
+    //MARK: screen functions
+
     func gotoHomeScreen()
     {
         let homeVC:HomeViewController = self.mainStoryboard.instantiateViewControllerWithIdentifier("homeScreen") as! HomeViewController

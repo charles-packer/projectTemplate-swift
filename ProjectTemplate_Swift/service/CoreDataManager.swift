@@ -17,7 +17,7 @@ protocol CoreDataManagerDelegate: class {
 
 class CoreDataManager:DataServiceDelegate
 {
-
+    //MARK: init functions
     var defaultContext:NSManagedObjectContext
     var hasLoaded:Bool = false
 
@@ -36,6 +36,7 @@ class CoreDataManager:DataServiceDelegate
         DataService.sharedInstance.getPlayerData()
     }
     
+    //MARK: player functions
     func getAllPlayers()->NSArray
     {
         return PlayerModel.MR_findAll()
@@ -47,10 +48,11 @@ class CoreDataManager:DataServiceDelegate
             
             for index in 1...results.count-1
             {
-                let playerId:NSString = results[index].objectForKey("playerID") as! String
-                let playerName:NSString = results[index].objectForKey("player") as! String
-
-                if PlayerModel.MR_findFirstByAttribute("playerID", withValue: playerId, inContext: localContext) == nil
+                let playerId:NSString = results[index].objectForKey(Constants.ModelKeys.playerId) as! String
+                let playerName:NSString = results[index].objectForKey(Constants.ModelKeys.playerName) as! String
+                let existingPlayer:PlayerModel = PlayerModel.MR_findFirstByAttribute(Constants.ModelKeys.playerId, withValue: playerId, inContext: localContext) as! PlayerModel
+                
+                if PlayerModel.MR_findFirstByAttribute(Constants.ModelKeys.playerId, withValue: playerId, inContext: localContext) == nil
                 {
                     let newPlayer:PlayerModel  = PlayerModel.MR_createInContext(self.defaultContext) as! PlayerModel
                     newPlayer.playerID = playerId as String
@@ -58,7 +60,7 @@ class CoreDataManager:DataServiceDelegate
                     NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
                 } else
                 {
-                    let existingPlayer:PlayerModel = PlayerModel.MR_findFirstByAttribute("playerID", withValue: playerId, inContext: localContext) as! PlayerModel
+                    
                     existingPlayer.playerID = playerId as String
                     existingPlayer.fullName = playerName as String
                 }
