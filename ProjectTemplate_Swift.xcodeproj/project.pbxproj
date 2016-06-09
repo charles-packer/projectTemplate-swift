@@ -25,6 +25,9 @@
 		CE93F0601D0A14C2002BBDEE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F05F1D0A14C2002BBDEE /* HomeViewController.swift */; };
 		CE93F0631D0A14D4002BBDEE /* ProjectTemplate_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE93F0611D0A14D4002BBDEE /* ProjectTemplate_Swift.xcdatamodeld */; };
 		CE93F0651D0A14E5002BBDEE /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F0641D0A14E5002BBDEE /* CoreDataManager.swift */; };
+		CE93F0671D0A162F002BBDEE /* AppStartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F0661D0A162F002BBDEE /* AppStartService.swift */; };
+		CE93F06B1D0A18B9002BBDEE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F06A1D0A18B9002BBDEE /* AuthViewController.swift */; };
+		CE93F06D1D0A19C5002BBDEE /* ScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F06C1D0A19C5002BBDEE /* ScreenService.swift */; };
 		CEDC24261D09E5BA0082773F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC24251D09E5BA0082773F /* Alamofire.framework */; };
 		CEDC24281D09E62F0082773F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC24271D09E62F0082773F /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +80,9 @@
 		CE93F05F1D0A14C2002BBDEE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = controller/HomeViewController.swift; sourceTree = "<group>"; };
 		CE93F0621D0A14D4002BBDEE /* ProjectTemplate_Swift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectTemplate_Swift.xcdatamodel; sourceTree = "<group>"; };
 		CE93F0641D0A14E5002BBDEE /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = service/CoreDataManager.swift; sourceTree = "<group>"; };
+		CE93F0661D0A162F002BBDEE /* AppStartService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppStartService.swift; path = service/AppStartService.swift; sourceTree = "<group>"; };
+		CE93F06A1D0A18B9002BBDEE /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = controller/AuthViewController.swift; sourceTree = "<group>"; };
+		CE93F06C1D0A19C5002BBDEE /* ScreenService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenService.swift; path = service/ScreenService.swift; sourceTree = "<group>"; };
 		CEDC24251D09E5BA0082773F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../Library/Developer/Xcode/DerivedData/ProjectTemplate_Swift-cqekspzrxenepadhormqfmrjkjun/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		CEDC24271D09E62F0082773F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../Library/Developer/Xcode/DerivedData/ProjectTemplate_Swift-cqekspzrxenepadhormqfmrjkjun/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		EBB5F7C37EC24A3EC0EAD792 /* Pods-ProjectTemplate_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTemplate_SwiftUITests/Pods-ProjectTemplate_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,10 +157,10 @@
 		CE8964FB1D09B54E006CCCF1 /* ProjectTemplate_Swift */ = {
 			isa = PBXGroup;
 			children = (
-				CE8965301D09B975006CCCF1 /* view */,
-				CE89652F1D09B971006CCCF1 /* service */,
-				CE89652E1D09B964006CCCF1 /* controller */,
 				CE89652D1D09B93B006CCCF1 /* model */,
+				CE8965301D09B975006CCCF1 /* view */,
+				CE89652E1D09B964006CCCF1 /* controller */,
+				CE89652F1D09B971006CCCF1 /* service */,
 				CE8964FC1D09B54E006CCCF1 /* AppDelegate.swift */,
 				CE8965061D09B54E006CCCF1 /* Assets.xcassets */,
 				CE89650B1D09B54E006CCCF1 /* Info.plist */,
@@ -195,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				CE93F05F1D0A14C2002BBDEE /* HomeViewController.swift */,
+				CE93F06A1D0A18B9002BBDEE /* AuthViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -204,6 +211,8 @@
 			children = (
 				CE89653C1D09BECE006CCCF1 /* DataService.swift */,
 				CE93F0641D0A14E5002BBDEE /* CoreDataManager.swift */,
+				CE93F0661D0A162F002BBDEE /* AppStartService.swift */,
+				CE93F06C1D0A19C5002BBDEE /* ScreenService.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -512,10 +521,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE93F0631D0A14D4002BBDEE /* ProjectTemplate_Swift.xcdatamodeld in Sources */,
+				CE93F0671D0A162F002BBDEE /* AppStartService.swift in Sources */,
+				CE93F06B1D0A18B9002BBDEE /* AuthViewController.swift in Sources */,
 				CE89653B1D09BD4D006CCCF1 /* PlayerModel.swift in Sources */,
 				CE89653D1D09BECE006CCCF1 /* DataService.swift in Sources */,
 				CE89653A1D09BD4D006CCCF1 /* PlayerModel+CoreDataProperties.swift in Sources */,
 				CE93F05D1D0A0E03002BBDEE /* PlayerTableViewCell.swift in Sources */,
+				CE93F06D1D0A19C5002BBDEE /* ScreenService.swift in Sources */,
 				CE93F0601D0A14C2002BBDEE /* HomeViewController.swift in Sources */,
 				CE93F0651D0A14E5002BBDEE /* CoreDataManager.swift in Sources */,
 				CE8964FD1D09B54E006CCCF1 /* AppDelegate.swift in Sources */,
@@ -666,6 +678,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hotstreakgames.ProjectTemplate-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ProjectTemplate_Swift/ProjectTemplate_Swift-Briding-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -679,6 +692,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hotstreakgames.ProjectTemplate-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ProjectTemplate_Swift/ProjectTemplate_Swift-Briding-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

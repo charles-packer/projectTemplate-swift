@@ -22,7 +22,6 @@ class HomeViewController: UIViewController,CoreDataManagerDelegate,UITableViewDe
         playerTable.delegate = self
         playerTable.dataSource = self
         CoreDataManager.sharedInstance.delegate = self
-        CoreDataManager.sharedInstance.startService()
         super.viewDidLoad()
     }
 
