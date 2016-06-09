@@ -50,8 +50,7 @@ class CoreDataManager:DataServiceDelegate
             {
                 let playerId:NSString = results[index].objectForKey(Constants.ModelKeys.playerId) as! String
                 let playerName:NSString = results[index].objectForKey(Constants.ModelKeys.playerName) as! String
-                let existingPlayer:PlayerModel = PlayerModel.MR_findFirstByAttribute(Constants.ModelKeys.playerId, withValue: playerId, inContext: localContext) as! PlayerModel
-                
+
                 if PlayerModel.MR_findFirstByAttribute(Constants.ModelKeys.playerId, withValue: playerId, inContext: localContext) == nil
                 {
                     let newPlayer:PlayerModel  = PlayerModel.MR_createInContext(self.defaultContext) as! PlayerModel
@@ -60,7 +59,7 @@ class CoreDataManager:DataServiceDelegate
                     NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
                 } else
                 {
-                    
+                    let existingPlayer:PlayerModel = PlayerModel.MR_findFirstByAttribute(Constants.ModelKeys.playerId, withValue: playerId, inContext: localContext) as! PlayerModel
                     existingPlayer.playerID = playerId as String
                     existingPlayer.fullName = playerName as String
                 }
