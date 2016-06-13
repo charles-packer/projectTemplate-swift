@@ -10,7 +10,6 @@
 		27A809AD745D9FAC7E03C5F8 /* Pods_ProjectTemplate_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07535CBE28E1A4665B9FE2E4 /* Pods_ProjectTemplate_SwiftUITests.framework */; };
 		2F8146C3FBCABD8AFE38578A /* Pods_ProjectTemplate_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0EA1E0581B3494FAC55D48 /* Pods_ProjectTemplate_SwiftTests.framework */; };
 		9A33B5D2EBB75292A8FB6C45 /* Pods_ProjectTemplate_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1163781AA92957CE9183FFE1 /* Pods_ProjectTemplate_Swift.framework */; };
-		CE6F57231D09E2CC00381089 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CE6F57221D09E2CC00381089 /* Podfile */; };
 		CE8964FD1D09B54E006CCCF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8964FC1D09B54E006CCCF1 /* AppDelegate.swift */; };
 		CE8965021D09B54E006CCCF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8965001D09B54E006CCCF1 /* Main.storyboard */; };
 		CE8965071D09B54E006CCCF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8965061D09B54E006CCCF1 /* Assets.xcassets */; };
@@ -29,6 +28,10 @@
 		CE93F06B1D0A18B9002BBDEE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F06A1D0A18B9002BBDEE /* AuthViewController.swift */; };
 		CE93F06D1D0A19C5002BBDEE /* ScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F06C1D0A19C5002BBDEE /* ScreenService.swift */; };
 		CE93F0701D0A1FDA002BBDEE /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE93F06F1D0A1FDA002BBDEE /* constants.swift */; };
+		CEC857E21D0E2374009F15C1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC857E11D0E2374009F15C1 /* ReactiveCocoa.framework */; };
+		CEC857E41D0E237E009F15C1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC857E31D0E237E009F15C1 /* Result.framework */; };
+		CEC857E61D0EF2AE009F15C1 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CEC857E51D0EF2AE009F15C1 /* Podfile */; };
+		CEC857E81D0EFF34009F15C1 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC857E71D0EFF34009F15C1 /* Expecta.framework */; };
 		CEDC24261D09E5BA0082773F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC24251D09E5BA0082773F /* Alamofire.framework */; };
 		CEDC24281D09E62F0082773F /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDC24271D09E62F0082773F /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
@@ -59,7 +62,6 @@
 		478623067F9C6B50B80DAFD4 /* Pods-ProjectTemplate_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTemplate_Swift/Pods-ProjectTemplate_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		BA569637D13CAC9E61EE6D62 /* Pods-ProjectTemplate_SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate_SwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTemplate_SwiftUITests/Pods-ProjectTemplate_SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C6BB7D2A8D443F75DF37467A /* Pods-ProjectTemplate_SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate_SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTemplate_SwiftTests/Pods-ProjectTemplate_SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		CE6F57221D09E2CC00381089 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		CE8964F91D09B54E006CCCF1 /* ProjectTemplate_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectTemplate_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8964FC1D09B54E006CCCF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8965011D09B54E006CCCF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,6 +87,10 @@
 		CE93F06A1D0A18B9002BBDEE /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = controller/AuthViewController.swift; sourceTree = "<group>"; };
 		CE93F06C1D0A19C5002BBDEE /* ScreenService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScreenService.swift; path = service/ScreenService.swift; sourceTree = "<group>"; };
 		CE93F06F1D0A1FDA002BBDEE /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = constants.swift; path = model/constants.swift; sourceTree = "<group>"; };
+		CEC857E11D0E2374009F15C1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "ReactiveCocoa/build/Debug-iphoneos/ReactiveCocoa.framework"; sourceTree = "<group>"; };
+		CEC857E31D0E237E009F15C1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = "ReactiveCocoa/Carthage/Checkouts/Result/build/Debug-iphoneos/Result.framework"; sourceTree = "<group>"; };
+		CEC857E51D0EF2AE009F15C1 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		CEC857E71D0EFF34009F15C1 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = "Pods/../build/Debug-iphoneos/Expecta/Expecta.framework"; sourceTree = "<group>"; };
 		CEDC24251D09E5BA0082773F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../Library/Developer/Xcode/DerivedData/ProjectTemplate_Swift-cqekspzrxenepadhormqfmrjkjun/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		CEDC24271D09E62F0082773F /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../Library/Developer/Xcode/DerivedData/ProjectTemplate_Swift-cqekspzrxenepadhormqfmrjkjun/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		EBB5F7C37EC24A3EC0EAD792 /* Pods-ProjectTemplate_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectTemplate_SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectTemplate_SwiftUITests/Pods-ProjectTemplate_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC857E81D0EFF34009F15C1 /* Expecta.framework in Frameworks */,
+				CEC857E41D0E237E009F15C1 /* Result.framework in Frameworks */,
+				CEC857E21D0E2374009F15C1 /* ReactiveCocoa.framework in Frameworks */,
 				CE93F05B1D09EB46002BBDEE /* MagicalRecord.framework in Frameworks */,
 				CEDC24281D09E62F0082773F /* SwiftyJSON.framework in Frameworks */,
 				CEDC24261D09E5BA0082773F /* Alamofire.framework in Frameworks */,
@@ -124,6 +133,9 @@
 		6AB03C337FA3C39730DED0CB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEC857E71D0EFF34009F15C1 /* Expecta.framework */,
+				CEC857E31D0E237E009F15C1 /* Result.framework */,
+				CEC857E11D0E2374009F15C1 /* ReactiveCocoa.framework */,
 				CE93F05A1D09EB46002BBDEE /* MagicalRecord.framework */,
 				CEDC24271D09E62F0082773F /* SwiftyJSON.framework */,
 				CEDC24251D09E5BA0082773F /* Alamofire.framework */,
@@ -167,7 +179,7 @@
 				CE8965061D09B54E006CCCF1 /* Assets.xcassets */,
 				CE89650B1D09B54E006CCCF1 /* Info.plist */,
 				CE8965371D09BC9E006CCCF1 /* ProjectTemplate_Swift-Briding-Header.h */,
-				CE6F57221D09E2CC00381089 /* Podfile */,
+				CEC857E51D0EF2AE009F15C1 /* Podfile */,
 			);
 			path = ProjectTemplate_Swift;
 			sourceTree = "<group>";
@@ -372,9 +384,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC857E61D0EF2AE009F15C1 /* Podfile in Resources */,
 				CE89650A1D09B54E006CCCF1 /* LaunchScreen.storyboard in Resources */,
 				CE8965071D09B54E006CCCF1 /* Assets.xcassets in Resources */,
-				CE6F57231D09E2CC00381089 /* Podfile in Resources */,
 				CE8965021D09B54E006CCCF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +689,12 @@
 			baseConfigurationReference = 478623067F9C6B50B80DAFD4 /* Pods-ProjectTemplate_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ReactiveCocoa/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/ReactiveCocoa/Carthage/Checkouts/Result/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Expecta",
+				);
 				INFOPLIST_FILE = ProjectTemplate_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hotstreakgames.ProjectTemplate-Swift";
@@ -691,6 +709,12 @@
 			baseConfigurationReference = 1A65F0AE7C46EADA21061FBC /* Pods-ProjectTemplate_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ReactiveCocoa/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/ReactiveCocoa/Carthage/Checkouts/Result/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Expecta",
+				);
 				INFOPLIST_FILE = ProjectTemplate_Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hotstreakgames.ProjectTemplate-Swift";

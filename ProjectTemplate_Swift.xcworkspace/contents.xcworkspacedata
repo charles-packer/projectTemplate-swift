@@ -5,6 +5,12 @@
       location = "group:ProjectTemplate_Swift.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:ReactiveCocoa/ReactiveCocoa.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ReactiveCocoa/Carthage/Checkouts/Result/Result.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

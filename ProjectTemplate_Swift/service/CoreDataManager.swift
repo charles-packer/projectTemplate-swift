@@ -11,8 +11,8 @@ import MagicalRecord
 
 
 protocol CoreDataManagerDelegate: class {
-    func didUpdatePlayerData(results:NSArray)
-
+     func didUpdatePlayerData(results:NSArray)
+    
 }
 
 class CoreDataManager:DataServiceDelegate
@@ -27,6 +27,7 @@ class CoreDataManager:DataServiceDelegate
         MagicalRecord.setupCoreDataStack()
         self.defaultContext = NSManagedObjectContext.MR_defaultContext()
     }
+ 
     
     weak var delegate:CoreDataManagerDelegate?
 
@@ -50,8 +51,10 @@ class CoreDataManager:DataServiceDelegate
             {
                 let playerId:NSString = results[index].objectForKey(Constants.ModelKeys.playerId) as! String
                 let playerName:NSString = results[index].objectForKey(Constants.ModelKeys.playerName) as! String
-
-                if PlayerModel.MR_findFirstByAttribute(Constants.ModelKeys.playerId, withValue: playerId, inContext: localContext) == nil
+                
+                let existingPlayer:PlayerModel? = PlayerModel.MR_findFirstByAttribute(Constants.ModelKeys.playerId, withValue: playerId, inContext: localContext) as? PlayerModel
+                
+                if existingPlayer == nil
                 {
                     let newPlayer:PlayerModel  = PlayerModel.MR_createInContext(self.defaultContext) as! PlayerModel
                     newPlayer.playerID = playerId as String
@@ -59,9 +62,8 @@ class CoreDataManager:DataServiceDelegate
                     NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()
                 } else
                 {
-                    let existingPlayer:PlayerModel = PlayerModel.MR_findFirstByAttribute(Constants.ModelKeys.playerId, withValue: playerId, inContext: localContext) as! PlayerModel
-                    existingPlayer.playerID = playerId as String
-                    existingPlayer.fullName = playerName as String
+                    existingPlayer!.playerID = playerId as String
+                    existingPlayer!.fullName = playerName as String
                 }
             }
             }, completion: { (success : Bool, error : NSError!) in

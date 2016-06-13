@@ -4,10 +4,12 @@
 use_frameworks!
 
 target 'ProjectTemplate_Swift' do
-pod 'MagicalRecord/Shorthand'
-pod 'Alamofire', '~> 3.4'
-pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
-
+    pod 'MagicalRecord/Shorthand'
+    pod 'Alamofire', '~> 3.4'
+    pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    pod 'Specta', '~> 1.0'
+    pod 'Expecta',     '~> 1.0'   # expecta matchers
+    pod 'OCMock',      '~> 2.2'   # OCMock
 end
 
 target 'ProjectTemplate_SwiftTests' do

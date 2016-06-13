@@ -8,16 +8,20 @@
 
 import UIKit
 import SwiftyJSON
+import ReactiveCocoa
 
 class HomeViewController: UIViewController,CoreDataManagerDelegate,UITableViewDelegate,UITableViewDataSource
 {
     @IBOutlet
     var playerTable:UITableView!
+    var textField:UITextField!
     
     var players:NSArray! = []
 
     override func viewDidLoad()
     {
+        
+        
         players = CoreDataManager.sharedInstance.getAllPlayers()
         playerTable.delegate = self
         playerTable.dataSource = self
